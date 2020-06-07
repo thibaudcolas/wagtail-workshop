@@ -23,7 +23,7 @@ We will also be using the AWS CLI. So install that if you haven't already.
 
 We'll mostly follow the instructions on buckup [https://github.com/torchbox/buckup#usage](https://github.com/torchbox/buckup#usage). We'll set the bucket up first before configuring the site to use it for media.
 
-In the AWS console locate the IAM user management from the main menu
+In the AWS console locate the [IAM user management](https://console.aws.amazon.com/iam/home) from the main menu
 
 ![as](./aws_2.png)
 
@@ -33,21 +33,15 @@ I'm going to call my user `codersofcolouruser`
 
 ![](./aws_3.png)
 
-Next you will be asked to add the user to a group. For now, we'll set up a full S3 user.
-
-In a new tab, Locate the groups link in the left menu and click Create new group
+Next you will be asked to add the user to a group. For now, we'll set up a full S3 user. Click "Create group"
 
 ![](./aws_4.png)
 
-Group Name: S3 (you can see I already have s3full)
+Group Name: S3
 
-The next screen will ask you to attach a policy. Search for s3 and find AmazonS3FullAccess, tick it and click next step.
+In the policies, search for s3 and find AmazonS3FullAccess, tick it and click "Create group".
 
-When your group is created, switch back to your IAM user tab
-
-Click the refresh button next to create group.
-
-Tick the group we created to add it to the user and click next:tags, bottom right
+When your group is created, it’s automatically assigned to the user we created. Click "Next: Tags", bottom right
 
 ![](./aws_5.png)
 
